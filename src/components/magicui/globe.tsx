@@ -13,8 +13,8 @@ const GLOBE_CONFIG: COBEOptions = {
   height: 2000,
   onRender: () => {},
   devicePixelRatio: 2,
-  phi: 0.5,
-  theta: -0.3,
+  phi: 2.5,
+  theta: -0.5,
   dark: 0,
   diffuse: 0.4,
   mapSamples: 16000,
@@ -101,7 +101,7 @@ export function Globe({
   }, [rs, config])
 
   return (
-    <div className={cn("absolute inset-x-0 bottom-[-65%] flex justify-center items-end w-full h-[200vh]", className)}>
+    <div className={cn("absolute inset-x-0 bottom-[-40%] flex justify-center items-end w-full h-[180vh]", className)}>
       <canvas
         className={cn("w-full h-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")}
         ref={canvasRef}
