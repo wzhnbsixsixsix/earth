@@ -101,9 +101,11 @@ export function Globe({
   }, [rs, config])
 
   return (
-    <div className={cn("absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]", className)}>
+    // <div className={cn("absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]", className)}></div>
+    <div className={cn("absolute inset-0 flex justify-center items-center w-full h-full", className)}>
       <canvas
-        className={cn("size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")}
+        // className={cn("size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")
+        className={cn("w-full h-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")}
         ref={canvasRef}
         onPointerDown={(e) => {
           pointerInteracting.current = e.clientX
