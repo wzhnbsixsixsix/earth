@@ -13,8 +13,8 @@ const GLOBE_CONFIG: COBEOptions = {
   height: 2000,
   onRender: () => {},
   devicePixelRatio: 2,
-  phi: 2.5,
-  theta: -0.5,
+  phi: 0,
+  theta: 0.3,
   dark: 0,
   diffuse: 0.4,
   mapSamples: 16000,
@@ -86,7 +86,7 @@ export function Globe({
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.003
+        if (!pointerInteracting.current) phi += 0.005
         state.phi = phi + rs.get()
         state.width = width * 2
         state.height = width * 2
