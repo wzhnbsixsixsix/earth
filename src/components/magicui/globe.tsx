@@ -101,7 +101,7 @@ export function Globe({
   }, [rs, config])
 
   return (
-    <div className={cn("absolute inset-x-0 bottom-[-15%] flex justify-center items-end w-full h-[140vh]", className)}>
+    <div className={cn("absolute top-[60%] inset-x-0 flex justify-center items-start w-full h-[80vh]", className)}>
       <canvas
         className={cn("w-full h-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")}
         ref={canvasRef}
