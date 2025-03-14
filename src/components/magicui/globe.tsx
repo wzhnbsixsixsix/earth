@@ -13,7 +13,7 @@ const GLOBE_CONFIG: COBEOptions = {
   height: 2000,
   onRender: () => {},
   devicePixelRatio: 2,
-  phi: 0,
+  phi: 0.5,
   theta: -0.3,
   dark: 0,
   diffuse: 0.4,
@@ -86,7 +86,7 @@ export function Globe({
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005
+        if (!pointerInteracting.current) phi += 0.003
         state.phi = phi + rs.get()
         state.width = width * 2
         state.height = width * 2
@@ -101,7 +101,7 @@ export function Globe({
   }, [rs, config])
 
   return (
-    <div className={cn("absolute inset-x-0 bottom-[-60%] flex justify-center items-end w-full h-[200vh]", className)}>
+    <div className={cn("absolute inset-x-0 bottom-[-65%] flex justify-center items-end w-full h-[200vh]", className)}>
       <canvas
         className={cn("w-full h-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]")}
         ref={canvasRef}
