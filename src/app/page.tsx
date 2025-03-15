@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden min-h-screen w-full">
       <div className="absolute inset-0 flex flex-col items-center">
-        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mt-24 mb-0">
+        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mt-30 mb-0">
           Sustainable Campus
         </span>
         <Globe />
